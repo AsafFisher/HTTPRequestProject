@@ -13,7 +13,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    //no more stuff wassap bro?
+    //no more stuff wassap bro?!
     return YES;
 }
 							
