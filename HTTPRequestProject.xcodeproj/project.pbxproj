@@ -22,6 +22,9 @@
 		1A205B0D192CF85500156E91 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A205AEC192CF85500156E91 /* UIKit.framework */; };
 		1A205B15192CF85500156E91 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1A205B13192CF85500156E91 /* InfoPlist.strings */; };
 		1A205B17192CF85500156E91 /* HTTPRequestProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A205B16192CF85500156E91 /* HTTPRequestProjectTests.m */; };
+		1A205B21192CFC8500156E91 /* Welcome.html in Resources */ = {isa = PBXBuildFile; fileRef = 1A205B20192CFC8500156E91 /* Welcome.html */; };
+		1A71AC6B192D13550007B0B7 /* HTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A71AC6A192D13550007B0B7 /* HTTPRequest.m */; };
+		1AC78AEA19325DD8001FF1BB /* NSData+json.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC78AE919325DD8001FF1BB /* NSData+json.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,11 @@
 		1A205B12192CF85500156E91 /* HTTPRequestProjectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HTTPRequestProjectTests-Info.plist"; sourceTree = "<group>"; };
 		1A205B14192CF85500156E91 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1A205B16192CF85500156E91 /* HTTPRequestProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTTPRequestProjectTests.m; sourceTree = "<group>"; };
+		1A205B20192CFC8500156E91 /* Welcome.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Welcome.html; sourceTree = "<group>"; };
+		1A71AC69192D13550007B0B7 /* HTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPRequest.h; sourceTree = "<group>"; };
+		1A71AC6A192D13550007B0B7 /* HTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPRequest.m; sourceTree = "<group>"; };
+		1AC78AE819325DD8001FF1BB /* NSData+json.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+json.h"; sourceTree = "<group>"; };
+		1AC78AE919325DD8001FF1BB /* NSData+json.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+json.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,12 +122,17 @@
 		1A205AEE192CF85500156E91 /* HTTPRequestProject */ = {
 			isa = PBXGroup;
 			children = (
+				1A205B20192CFC8500156E91 /* Welcome.html */,
 				1A205AF7192CF85500156E91 /* AppDelegate.h */,
 				1A205AF8192CF85500156E91 /* AppDelegate.m */,
 				1A205AFA192CF85500156E91 /* Main_iPhone.storyboard */,
 				1A205AFD192CF85500156E91 /* Main_iPad.storyboard */,
 				1A205B00192CF85500156E91 /* ViewController.h */,
 				1A205B01192CF85500156E91 /* ViewController.m */,
+				1A71AC69192D13550007B0B7 /* HTTPRequest.h */,
+				1A71AC6A192D13550007B0B7 /* HTTPRequest.m */,
+				1AC78AE819325DD8001FF1BB /* NSData+json.h */,
+				1AC78AE919325DD8001FF1BB /* NSData+json.m */,
 				1A205B03192CF85500156E91 /* Images.xcassets */,
 				1A205AEF192CF85500156E91 /* Supporting Files */,
 			);
@@ -202,6 +215,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Asaf Fisher";
 				TargetAttributes = {
+					1A205AE4192CF85500156E91 = {
+						DevelopmentTeam = 4VU2ZJ2HD8;
+					};
 					1A205B08192CF85500156E91 = {
 						TestTargetID = 1A205AE4192CF85500156E91;
 					};
@@ -233,6 +249,7 @@
 			files = (
 				1A205AFF192CF85500156E91 /* Main_iPad.storyboard in Resources */,
 				1A205B04192CF85500156E91 /* Images.xcassets in Resources */,
+				1A205B21192CFC8500156E91 /* Welcome.html in Resources */,
 				1A205AFC192CF85500156E91 /* Main_iPhone.storyboard in Resources */,
 				1A205AF3192CF85500156E91 /* InfoPlist.strings in Resources */,
 			);
@@ -254,8 +271,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A205B02192CF85500156E91 /* ViewController.m in Sources */,
+				1A71AC6B192D13550007B0B7 /* HTTPRequest.m in Sources */,
 				1A205AF9192CF85500156E91 /* AppDelegate.m in Sources */,
 				1A205AF5192CF85500156E91 /* main.m in Sources */,
+				1AC78AEA19325DD8001FF1BB /* NSData+json.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,10 +409,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HTTPRequestProject/HTTPRequestProject-Prefix.pch";
 				INFOPLIST_FILE = "HTTPRequestProject/HTTPRequestProject-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -403,10 +425,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HTTPRequestProject/HTTPRequestProject-Prefix.pch";
 				INFOPLIST_FILE = "HTTPRequestProject/HTTPRequestProject-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -470,6 +495,7 @@
 				1A205B1C192CF85500156E91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1A205B1D192CF85500156E91 /* Build configuration list for PBXNativeTarget "HTTPRequestProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -478,6 +504,7 @@
 				1A205B1F192CF85500156E91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

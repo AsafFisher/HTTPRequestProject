@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<NSURLConnectionDataDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *secretTextField;
+@property (weak, nonatomic) IBOutlet UILabel *lable;
+
+@property (weak, nonatomic) IBOutlet UIWebView *myWebView;
 
 @end
